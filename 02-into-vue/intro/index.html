@@ -8,7 +8,12 @@
 </head>
 <body>
     
-    <div id="myApp"></div>
+    <div id="myApp">
+        <h1> {{message}} </h1>
+        <blockquote>Despe app {{author}}</blockquote>
+
+        <button v-on:click="changeQuote">Cambiar content</button>
+    </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
