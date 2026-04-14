@@ -9,12 +9,12 @@
     
     <div id="myApp"> 
         <h1>Batman quotes</h1>
-
+        <button v-on:click="changeAuthor">Toggle author</button>
         <hr>
         <ul>
             <li v-for="({ quote, author} , index) in quotes">
-                <span>{{ index + 1 }}. {{ quote }}</span>
-                <blockquote>{{ author }}</blockquote>
+                <span>{{ index + 1 }} - {{ quote }}</span>
+                <blockquote v-if="showAuthor">{{ author }}</blockquote>
             </li>
         </ul>
 

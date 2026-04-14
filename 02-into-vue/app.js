@@ -11,8 +11,15 @@ const {createApp} = Vue;
 
 const app = createApp({
     setup(){
+        
+        let showAuthor = ref(true);
+        const changeAuthor = () => {
+            showAuthor.value = !showAuthor.value;
+        };
         return{
-            quotes
+            quotes,
+            showAuthor,
+            changeAuthor
         }
     }
 });
